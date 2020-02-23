@@ -1,7 +1,7 @@
 import cv2
 
 classificador = cv2.CascadeClassifier("haarcascade-frontalface-default.xml")
-camera = cv2.VideoCapture(1)
+camera = cv2.VideoCapture(1, cv2.CAP_DSHOW)
 
 while (True):
     conectado, imagem = camera.read()
