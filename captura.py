@@ -25,7 +25,7 @@ while (True):
             cv2.rectangle(regiao, (ox, oy), (ox + ol, oy + oa), (0, 255, 0), 2)
 
             if cv2.waitKey(1) & 0xFF == ord('q'):
-                if numpy.average(imagemCinza) > 110:
+                if numpy.average(imagemCinza) > 60:
                     imageFace = cv2.resize(imagemCinza[y:y + a, x:x + l], (largura, altura))
                     cv2.imwrite("fotos/pessoa." + str(id) + "." + str(amostra) + ".jpg", imageFace)
                     print("[foto " + str(amostra) + " capturada com sucesso]")
